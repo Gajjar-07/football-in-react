@@ -178,7 +178,9 @@ app.post('/addteamdata', async (req, res) => {
    } catch (errror){
         res.status(500).json({success:false,message:'server error'})
    }
-
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+  });
 });
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
